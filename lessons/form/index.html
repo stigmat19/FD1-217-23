@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+</head>
+<body>
+    <!-- https://fe.it-academy.by/TestForm.php?firstname=qqq&lastname=www&age=24&gender=W -->
+    <form action="https://fe.it-academy.by/TestForm.php" method="post">
+
+        <select name="city[]" size="3" multiple>
+            <optgroup label="Minskaya">
+                <option value="Minsk">Minsk</option>
+                <option value="Borisov">Borisov</option>
+                <option value="Priluki">Priluki</option>
+            </optgroup>
+            
+            <optgroup label="Gomelskaya">
+                <option value="4">Gomel</option>
+                <option value="5">Bobruisk</option>
+                <option value="6">Svetlogorsk</option>
+            </optgroup>
+            
+        </select>
+
+        <fieldset>
+            <legend>checkbox</legend>
+        
+            <input type="checkbox" name="car[]" value="bmw" id="bmw"> 
+            <label for="bmw">bmw</label>
+
+            <label>
+                <input type="checkbox" name="car[]" value="mers"> mers
+            </label>
+            
+            <input type="checkbox" name="car[]" value="audi"> audi
+
+        </fieldset>
+        <fieldset>
+            <legend>radio</legend>
+        
+            <input type="radio" name="car" value="bmw"> bmw
+            <input type="radio" name="car" value="mers" checked> mers
+            <input type="radio" name="car" value="audi"> audi
+
+        </fieldset>
+        <fieldset>
+            <legend>radio</legend>
+        
+            <input type="radio" name="car1" value="bmw"> bmw
+            <input type="radio" name="car1" value="mers" checked> mers
+            <input type="radio" name="car1" value="audi"> audi
+
+        </fieldset>
+        <input type="text" name="firstname" readonly value="test" placeholder="hello"> <br>
+        <input type="password" name="pass"> <br>
+        <input type="text" name="age"> <br>
+        <input type="text" name="gender"> <br>
+
+        
+
+        <input type="submit">
+    </form>
+
+    <form action="https://fe.it-academy.by/TestForm.php">
+        <input type="hidden" name="formType" value="form1">
+        <input type="text" name="car">
+        <input type="submit">
+    </form>
+
+    <form action="https://fe.it-academy.by/TestForm.php">
+        <input type="hidden" name="formType" value="form2">
+        <input type="text" name="car">
+        <button type="submit"><h1>send</h1></button>
+
+        <textarea name="textarea" id="" cols="30" rows="10"></textarea>
+    </form>
+    
+</body>
+</html>

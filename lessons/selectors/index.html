@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="style.css">
+
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 10000px;
+        }
+
+        #test {
+            color: brown;
+        }
+
+        .pay {
+            font-weight: 900;
+            color: red;
+        }
+
+        .vip {
+            font-style: italic;
+            color: blueviolet;
+        }
+
+        p {
+            color: blue !important;
+        }
+
+        [href] {
+            color: red;
+        }
+
+        [name] {
+            color: blueviolet;
+        }
+
+        [src$='.png'] {
+            border: 3px solid red;
+        }
+
+        [src$='.gif'] {
+            border: 3px dashed blue;
+        }
+
+        [src$='.jpg'] {
+            border: 3px dotted orange;
+        }
+
+        [href*="av.by"] {
+            color: darkgreen;
+        }
+
+        div > span{
+            
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <section>
+            <ul></ul>
+        </section>
+    </div>
+
+    <p class="a"></p>
+    <div>hello</div>
+    <div>hello</div>
+    <div class="a">hello</div>
+    <div>hello</div>
+    <em></em>
+    <div>
+        <span class="b"></span>
+        <p class="b"></p>
+        <em></em>
+        <p>
+            <span class="b"></span>
+            <em></em>
+        </p>
+    </div>
+    <!-- 
+        selector tag - 1
+        selector .class - 10
+        selector #id - 100
+        inline - 1000
+        !important - 10000
+     -->
+
+    <h1 style="color: red;">hello</h1>
+
+    <p class="vip pay">Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio error eius molestias quidem
+        asperiores a aperiam at dolorum, ab nam dolores minus sequi facilis quod. Sit illo hic necessitatibus dolore?
+    </p>
+    <p class="pay vip" id="test">Minima dolor ea exercitationem, explicabo quae hic natus quibusdam perferendis
+        voluptates ipsam? Aut minus explicabo harum labore itaque veritatis amet facere nesciunt odio sapiente a, libero
+        impedit consequuntur! Ex, tempora.</p>
+    <p class="pay">Iure deserunt odio dolore commodi placeat adipisci, eum earum explicabo repellat temporibus. Harum
+        tenetur laudantium hic. Aliquam dolorem eum dignissimos qui sint natus nobis minima eius dolor, exercitationem
+        libero! Deleniti?</p>
+    <p class="pay">Consectetur repellendus impedit eaque sint obcaecati est, aspernatur, deleniti itaque distinctio
+        dignissimos facere similique praesentium aliquam mollitia exercitationem, qui ea dicta. Culpa praesentium odio
+        voluptates corrupti harum molestias vel hic!</p>
+    <p>Explicabo nulla, ullam totam, qui iusto officiis debitis perferendis maxime, recusandae expedita neque rerum
+        adipisci molestiae eveniet nihil eos amet. Ab sapiente non ex inventore libero reiciendis, fugit nostrum natus.
+    </p>
+
+    <a href="#aaa">go to aaa</a> <br>
+    <a href="#bbb">go to bbb</a> <br>
+    <a name="bbb">bbb</a> <br>
+    <a name="aaa">aaa</a> <br>
+
+    <hr>
+
+    <img src="1.png" alt="1.png"> <br>
+    <img src="2.gif" alt="2.gif"> <br>
+    <img src="1.png" alt="1.png"> <br>
+    <img src="3.jpg" alt="3.jpg"> <br>
+    <img src="2.gif" alt="2.gif"> <br>
+
+    <hr>
+    <a href="https://aliexpress.ru/">aliexpress</a><br>
+    <a href="https://cars.av.by/chevrolet">av.by</a> <br>
+    <a href="https://www.onliner.by/">onliner</a> <br>
+
+
+    <div class="header">
+        <ul>
+            <li>
+                <a href="">
+                    <span>
+                        <em></em>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        <em></em>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        <em></em>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        <em></em>
+                    </span>
+                </a>
+            </li>
+            <li>
+                <a href="">
+                    <span>
+                        <em></em>
+                    </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</body>
+
+</html>

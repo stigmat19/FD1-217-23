@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 10000px;
+        }
+        h2::before{
+            content: '-------- ';
+        }
+        h2::after{
+            content: ' --------';
+        }
+        ul{
+            counter-reset: marka;
+        }
+        li::before{
+            counter-increment: marka +1;
+            content: "Марка " counter(marka) ": ";
+        }
+    </style>
+
+</head>
+<body>
+    <span></span>
+    <h2>hello</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis, doloremque placeat dicta, error velit consectetur repellendus hic inventore quibusdam excepturi, voluptatibus non dolores eos vitae debitis a corrupti at soluta.</p>
+
+    <h2>test</h2>
+
+    <ul>
+        <li>BMW</li>
+        <li>Mercedes</li>
+        <li>Audi</li>
+        <li>Volvo</li>
+    </ul>
+
+    <ul>
+        <li>BMW</li>
+        <li>Mercedes</li>
+        <li>Audi</li>
+        <li>Volvo</li>
+    </ul>
+</body>
+</html>

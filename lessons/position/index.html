@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body {
+            height: 10000px;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .wrap {
+            width: 350px;
+            height: 350px;
+            background-color: aqua;
+            margin: 50px;
+            /* position: relative; */
+        }
+
+        .item {
+            width: 100px;
+            height: 100px;
+            /* position: absolute; */
+        }
+
+        .item:first-child {
+            left: 20px;
+            top: 20px;
+            background-color: red;
+        }
+
+        .item:nth-child(2) {
+            left: 60px;
+            top: 60px;
+            background-color: green;
+        }
+
+        .item:last-child {
+            left: 100px;
+            top: 100px;
+            background-color: blue;
+        }
+
+        .card {
+            width: 295px;
+            height: 400px;
+            border: 2px solid red;
+            border-radius: 33px;
+            margin: 50px;
+            background: url('1.jpeg') no-repeat center;
+            overflow: hidden;
+        }
+
+        .card div {
+            background-color: rgba(0, 0, 0, 0.7);
+            opacity: 0;
+            color: aliceblue;
+            padding: 29px;
+            height: 100%;
+            transition: 0.5s;
+        }
+        .card div:hover{
+            opacity: 1;
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <div class="wrap">
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+        <div class="item">Lorem ipsum dolor sit amet consectetur adipisicing elit. </div>
+        <div class="item"></div>
+    </div>
+
+
+    <hr>
+
+    <div class="card">
+        <div>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero, ipsum. Est harum inventore optio expedita.
+            Cupiditate accusamus necessitatibus, doloribus provident ad dolore molestias eos non sequi quos fuga aperiam
+            iure!
+        </div>
+    </div>
+
+</body>
+
+</html>
