@@ -1,0 +1,50 @@
+@import "variables/variables.scss";
+@import "mixins/mixins.scss";
+
+.header {
+    color: $red;
+
+    ul {
+        color: aqua;
+
+        li {
+            font-size: 20px;
+
+            a {
+                text-decoration: none;
+
+                span {
+                    font-style: italic;
+
+                    &:hover {
+                        font-weight: 900;
+                    }
+                }
+            }
+        }
+    }
+}
+
+
+
+.btn1{
+    @include btn(100px, red);
+}
+
+.btn2{
+    @include btn(200px, blue);
+}
+
+.btn3{
+    @include btn();
+}
+
+@for $count from 1 through 5
+{
+    .color#{$count}
+    {
+        width: 50px;
+        height: 50px;
+        background-image: url('img' + $count + '.jpg') ;
+       }
+}

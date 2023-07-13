@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .wrap{
+            background-color: red;
+            padding: 1px;
+            display: flex;
+            justify-content: space-between;
+            width: 1000px;
+            margin: 0 auto;
+            flex-flow: wrap;
+        }
+        .item{
+            width:220px;
+            background-color: blue;
+            color: aliceblue;
+            margin-bottom: 20px;
+        }
+
+        .item:nth-child(2){
+            background-color: orange;
+            color: black;
+        }
+      
+        .float-wrap{
+            background-color: red;
+            padding: 1px;
+            width: 1000px;
+            margin: 0 auto;
+            padding: 20px 0;
+        }
+        .float-item{
+            width:220px;
+            background-color: blue;
+            margin: 20px;
+            float: left;
+            color: aliceblue;
+        }
+        .float-row{
+            background-color: blueviolet;
+            margin: 0 -20px;
+        }
+        .clearfix::after{
+            display: block;
+            content: "";
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <h1>flex</h1>
+    <div class="wrap">
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+   
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+   
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+   
+        
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        <div class="item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+    </div>
+
+    <hr>
+    <h1>float</h1>
+
+    <div class="float-wrap">
+        <div class="float-row clearfix">
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+       
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+       
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+       
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+       
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+       
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+            <div class="float-item">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aspernatur architecto cum nobis odit aliquid laboriosam, natus maxime harum alias dolorem sunt, id, modi incidunt voluptatibus asperiores a itaque sint praesentium?</div>
+        </div>
+    </div>
+    
+</body>
+</html>
