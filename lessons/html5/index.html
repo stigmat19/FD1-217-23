@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        body{
+            height: 10000px;
+        }
+        /* input:enabled{
+            background-color: red;
+        } */
+        input:checked{
+            width: 20px;
+            height: 20px;
+        }
+    </style>
+
+</head>
+<body>
+    <header class="golova"></header>
+    <div class="menu"></div>
+    <img width="200" src="https://banners.adfox.ru/230721/adfox/2508130/7294915.a0f6bdcf719b6742aaa78392ac7b61d4.png" alt="">
+    <hgroup>
+        <h1 contenteditable>Разработка сайтов</h1>
+        <h2>заказать анализ</h2>
+    </hgroup>
+    <textarea name="" id="" cols="30" rows="10"></textarea>
+
+    <footer></footer>
+    <nav></nav>
+    <menu>
+        <command></command>
+    </menu>
+    <aside></aside>
+    <section></section>
+    
+    <hr>
+    <form action="https://fe.it-academy.by/TestForm.php">
+        <input type="text"> <br>
+
+        <input type="checkbox">
+        <input type="checkbox" checked>
+        <input type="checkbox">
+
+        <input type="text" pattern="^(\+375|80)-(29|25|44|33)-(\d{3})-(\d{2})-(\d{2})$" autofocus> <br>
+        <input type="number" id="inp" min="0" max="21"  step="1" name="text">
+        <input type="submit" disabled>
+        <input type="submit">
+    </form>
+
+    <script>
+        const inp = document.getElementById('inp');
+        inp.addEventListener('change', (e) => {
+            console.log(e.currentTarget.value);
+        })
+        
+    </script>
+</body>
+</html>
