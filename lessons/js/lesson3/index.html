@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .app{
+            width: 100px;
+            height: 100px;
+            background-color: blue;
+            color: azure;
+            transition: 3s;
+        }
+        h1{
+            font-style: italic;
+        }
+        h1 span{
+            font-weight: 900;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="app">test1</div>
+    <button onclick="changeBtn('red', 500, 360)">click1</button>
+    <button onclick="changeBtn('violet', 0, 0)">click2</button>
+    <div class="app">test2</div>
+
+    <script>
+
+        var app = document.querySelectorAll('[class="app"]');
+
+        function changeBtn(color, size, deg){
+            var elem = app[1];
+
+            elem.style.backgroundColor = color;
+            elem.style.marginLeft = size + "px";
+            elem.style.transform = `rotate(${deg}deg)`;
+
+            var text = '<span>world</span>';
+
+            elem.innerHTML = `<h1>hello ${text}</h1>`
+        }
+
+       
+
+       
+
+    </script>
+    
+</body>
+</html>
