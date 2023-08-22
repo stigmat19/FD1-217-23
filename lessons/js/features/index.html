@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+
+    <title>Document</title>
+
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            overflow-x: hidden;
+        }
+
+        header {
+            height: 50px;
+            background-color: #693e3e;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 10;
+        }
+
+        #menu {
+            width: 300px;
+            display: flex;
+            margin: 0 auto;
+            background-color: blueviolet;
+            justify-content: space-between;
+            height: 100%;
+        }
+
+        #menu li {
+            background-color: aqua;
+            list-style-type: none;
+        }
+
+        #menu li a {
+            display: flex;
+            padding: 0 15px;
+            width: 100%;
+            height: 100%;
+            align-items: center;
+        }
+
+        .open {
+            background-color: red;
+            cursor: pointer;
+            display: none;
+        }
+
+        .close {
+            background-color: blue;
+            color: azure;
+            cursor: pointer;
+            display: none;
+        }
+
+        .block {
+            height: 100vh;
+        }
+
+        #one {
+            background-color: red;
+            margin-top: 50px;
+        }
+
+        #two {
+            background-color: green;
+        }
+
+        #three {
+            background-color: blue;
+        }
+
+        #four {
+            background-color: yellow;
+        }
+
+        #five {
+            background-color: violet;
+        }
+        .item{
+            margin: 20px;
+            height: 100px;
+            background-color: aqua;
+        }
+
+        @media all and (max-width: 500px) {
+
+            .active {
+                display: inline-block;
+            }
+
+            #menu {
+                width: 100px;
+                height: 100%;
+                flex-direction: column;
+                position: absolute;
+                right: -100px;
+                top: 50px;
+                transition: 0.5s;
+            }
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <header>
+        <div class="btn-wrap">
+            <div class="open">open</div>
+            <div class="close">close</div>
+        </div>
+        <ul id="menu">
+            <li><a href="#one">one</a></li>
+            <li><a href="#two">two</a></li>
+            <li><a href="#three">three</a></li>
+            <li><a href="#four">four</a></li>
+            <li><a href="#five">five</a></li>
+        </ul>
+    </header>
+
+    <div id="one" class="block">
+        <div class="owl-carousel owl-carousel1 owl-theme">
+            <div class="item"><h4>1</h4></div>
+            <div class="item"><h4>2</h4></div>
+            <div class="item"><h4>3</h4></div>
+            <div class="item"><h4>4</h4></div>
+            <div class="item"><h4>5</h4></div>
+            <div class="item"><h4>6</h4></div>
+            <div class="item"><h4>7</h4></div>
+            <div class="item"><h4>8</h4></div>
+            <div class="item"><h4>9</h4></div>
+            <div class="item"><h4>10</h4></div>
+            <div class="item"><h4>11</h4></div>
+            <div class="item"><h4>12</h4></div>
+        </div>
+    </div>
+    <div id="two" class="block">
+        <div class="owl-carousel owl-carousel2 owl-theme">
+            <div class="item"><h4>1</h4></div>
+            <div class="item"><h4>2</h4></div>
+            <div class="item"><h4>3</h4></div>
+            <div class="item"><h4>4</h4></div>
+            <div class="item"><h4>5</h4></div>
+            <div class="item"><h4>6</h4></div>
+            <div class="item"><h4>7</h4></div>
+            <div class="item"><h4>8</h4></div>
+            <div class="item"><h4>9</h4></div>
+            <div class="item"><h4>10</h4></div>
+            <div class="item"><h4>11</h4></div>
+            <div class="item"><h4>12</h4></div>
+        </div>
+    </div>
+    <div id="three" class="block"></div>
+    <div id="four" class="block"></div>
+    <div id="five" class="block"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+        integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+
+    <script src="js/owl.carousel.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            $(".open").addClass('active')
+
+            $(".open").on("click", function () {
+                $("#menu").css("right", 0)
+                $(this).removeClass("active");
+                $(".close").addClass("active");
+            })
+
+            $(".close").on("click", function () {
+                $("#menu").css("right", "-100px")
+                $(this).removeClass("active");
+                $(".open").addClass("active");
+            })
+
+            // scroll menu
+
+            $("#menu").on("click", "a", function (e) {
+                e.preventDefault();
+                var id = $(this).attr("href");
+                var top = $(id).offset().top;
+
+                $('body, html').animate({ scrollTop: top }, 500)
+            })
+
+            // owl carousel
+
+            $('.owl-carousel1').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplayHoverPause: true,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 2
+                    },
+                    600: {
+                        items: 3
+                    },
+                    1000: {
+                        items: 5
+                    }
+                }
+            })
+
+            $('.owl-carousel2').owlCarousel({
+                loop: true,
+                margin: 10,
+                nav: true,
+                autoplayHoverPause: true,
+                autoplay: true,
+                responsive: {
+                    0: {
+                        items: 3
+                    },
+                    600: {
+                        items: 4
+                    },
+                    1000: {
+                        items: 3
+                    }
+                }
+            })
+        })
+    </script>
+
+</body>
+
+</html>
