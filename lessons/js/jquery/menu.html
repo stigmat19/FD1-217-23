@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body{
+            overflow-x: hidden;
+        }
+        header{
+            height: 50px;
+            background-color: aqua;
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+        }
+        a{
+            text-decoration: none;
+            color: inherit;
+        }
+        ul{
+            width: 500px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            height: 100%;
+            align-items: center;
+            transition: 0.5s;
+        }
+        li{
+            border: 2px solid black;
+            list-style-type: none;
+            padding: 0 20px;
+        }
+        .block{
+            height: 100vh;
+        }
+        .block:first-of-type{
+            margin-top: 50px;
+            background-color: red;
+        }
+        .block:nth-of-type(2){
+            background-color: green;
+        }
+        .block:nth-of-type(3){
+            background-color: blue;
+        }
+        .block:nth-of-type(4){
+            background-color: violet;
+        }
+        .block:last-of-type{
+            background-color: orange;
+        }
+        .humb{
+            display: none;
+        }
+        #close{
+            display: none;
+            cursor: pointer;
+        }
+        #open{
+            cursor: pointer;
+        }
+        @media screen and (max-width: 1000px) {
+            .humb{
+                display: flex;
+                justify-content: flex-end;
+            }
+            ul#menu{
+                flex-direction: column;
+                position: absolute;
+                width: auto;
+                right: -100px;
+                top: 50px;
+            }
+            ul#menu li{
+                width: 100px;
+                background-color: aliceblue;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="humb">
+            <div id="open">open</div>
+            <div id="close">close</div>
+        </div>
+        <ul id="menu">
+            <li>
+                <a href="#one">one</a>
+            </li>
+            <li>
+                <a href="#two">two</a>
+            </li>
+            <li>
+                <a href="#three">three</a>
+            </li>
+            <li>
+                <a href="#four">four</a>
+            </li>
+            <li>
+                <a href="#five">five</a>
+            </li>
+        </ul>
+    </header>
+
+    <div id="one" class="block"></div>
+    <div id="two" class="block"></div>
+    <div id="three" class="block"></div>
+    <div id="four" class="block"></div>
+    <div id="five" class="block"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        $(document).ready(function(){
+            $('#open').click(function(){
+                $('#menu').css('right', 0);
+                $(this).css('display', 'none');
+                $('#close').css('display', 'block')
+            })
+
+            $('#close').click(function(){
+                $('#menu').css('right', '-100px');
+                $(this).css('display', 'none');
+                $('#open').css('display', 'block')
+            })
+
+            $('#menu').on('click', 'a', function(e){
+                e.preventDefault();
+                var id = $(this).attr('href');
+                var top = $(id).offset().top;
+
+                $('body,html').animate({scrollTop: top-50}, 500);
+            })
+        })
+    </script>
+    
+</body>
+</html>
